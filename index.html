@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D骨骼节点旋转轴显示 - 预览模式</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/examples/js/controls/TransformControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="modified_script_v7.js"></script>
+</head>
+<body>
+    <div id="canvas-container">
+        <div class="control-buttons">
+            <input type="file" id="file-input" accept=".glb, .gltf">
+            <button id="edit-bones-button">编辑骨骼</button>
+            <button id="reset-button">重置骨骼</button>
+            <button id="play-button">播放</button>
+            <input type="number" id="transition-time" placeholder="过渡时间(秒)">
+            <button id="save-button">保存动画</button>
+            <input type="file" id="load-animation-input" accept=".json" class="hidden">
+            <button id="load-animation-button">加载动画</button>
+            <button id="connect-button">连接ESP32</button>
+            <div id="connection-status">未连接</div>
+        </div>
+        <div id="axis-controls">
+            <label><input type="checkbox" id="axis-x" checked> X轴</label>
+            <label><input type="checkbox" id="axis-y" checked> Y轴</label>
+            <label><input type="checkbox" id="axis-z" checked> Z轴</label>
+        </div>
+        <div id="bone-controls" style="display: none;">
+            <div id="bone-list"></div>
+        </div>
+        <div id="timeline-container" class="hidden">
+            <button id="add-frame-button">+</button>
+            <button id="remove-frame-button">-</button>
+            <div id="timeline-frame-container"></div>
+        </div>
+    </div>
+    <div id="log"></div>
+</body>
+</html>
