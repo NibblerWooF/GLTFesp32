@@ -517,7 +517,7 @@ function init() {
 
 function connectWebSocket() {
     console.log('Attempting to connect to WebSocket...');
-    websocket = new WebSocket('ws://192.168.4.1:81');
+    websocket = new WebSocket('wss://192.168.4.1:81');
 
     websocket.onopen = function(evt) {
         document.getElementById('connection-status').innerText = 'Connected';
