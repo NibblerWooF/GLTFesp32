@@ -9,7 +9,12 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/examples/js/controls/TransformControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="modified_script_v7.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/examples/js/loaders/RGBELoader.js"></script>  
+    <script src="utils.js"></script>
+    <script src="network.js"></script>
+    <script src="controls.js"></script>
+    <script src="animation.js"></script>
+    <script src="init.js"></script>
 </head>
 <body>
     <div id="canvas-container">
@@ -24,6 +29,9 @@
             <button id="load-animation-button">加载动画</button>
             <button id="connect-button">连接ESP32</button>
             <div id="connection-status">未连接</div>
+            <button id="loadBackground">加载本地背景贴图</button>
+            <input type="file" id="backgroundInput" style="display: none;" accept=".hdr">
+            <button id="toggleBackground">隐藏背景</button>
         </div>
         <div id="axis-controls">
             <label><input type="checkbox" id="axis-x" checked> X轴</label>

@@ -1,3 +1,4 @@
+/* 样式调整 */
 #canvas-container {
     width: 100vw;
     height: 100vh;
@@ -23,8 +24,6 @@
     padding: 2px; /* Add padding for better visibility */
     border: 1px solid black; /* Add border to see the boundaries of the label */
 }
-
-
 
 #timeline-container {
     position: absolute;
